@@ -61,10 +61,13 @@ $twitter: #55acee;
 body {
 	background: $white;
 }
+
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
+@import 'account/profile/profile.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
 @import 'modal/modal.scss';
+@import 'navbar/navbar.scss';
 // endinjector

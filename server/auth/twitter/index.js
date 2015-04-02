@@ -13,6 +13,7 @@ router
   }))
 
   .get('/callback', passport.authenticate('twitter', {
+  	successRedirect: '/profile',
     failureRedirect: '/signup',
     session: false
   }), auth.setTokenCookie);

@@ -23,7 +23,11 @@ exports.setup = function (User, config) {
           twitter: profile._json
         });
         user.save(function(err) {
-          if (err) return done(err);
+
+          if (err) {
+
+            return done(err);
+          }
           return done(err, user);
         });
       } else {
