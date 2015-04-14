@@ -31,6 +31,7 @@
 
 .post-body {
 	font-size: 18px;
+	white-space: pre-line;
 }
 
 #modal {
@@ -39,13 +40,51 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.8);
 	z-index: 99999;
 	opacity:0;
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
+
+	.btn {
+		@include button(#cccccc);
+		margin: 0px 10px 10px 10px;
+		font-size: .8em;
+	}
+
+	.submit {
+		float: right;
+		clear: both;
+	}
+
+	hr {
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	
+	div {
+		width: 500px;
+		position: relative;
+		margin: 10% auto;
+		border-radius: 10px;
+		background: #fff;
+	}
+
+	textarea {
+		font-size: 18px;
+		border: 0px;
+		width: 450px;
+		height: 250px;
+		margin: 20px 25px;
+		padding: 10px;
+		resize: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
 }
 
 #modal:target {
@@ -53,14 +92,6 @@
 	pointer-events: auto;
 }
 
-#modal > div {
-	width: 400px;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #fff;
-}
 
 // .close {
 // 	background: #606061;

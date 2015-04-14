@@ -11,8 +11,13 @@ angular.module('gratitudeApp')
 	];
 
 	$scope.addPost = function(){
+		if (!$scope.body || $scope.body === "") {
+			return;
+		}
 		var date = new Date;
 		var options = { month: 'long', day: 'numeric', year: 'numeric' }
-		$scope.posts.push({title: date.toLocaleDateString('en-US', options), body: 'Lol'});
+		$scope.posts.push({title: date.toLocaleDateString('en-US', options), body: $scope.body});
+
+		$scope.body = "";
 	};
 });
