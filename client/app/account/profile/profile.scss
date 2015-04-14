@@ -1,0 +1,79 @@
+.profile {
+	font-family: 'poly';
+	line-height: 1.6;
+	color: $black;
+	
+	hr {
+		clear: both;
+	}
+}
+
+.profile-cta {
+	margin-bottom: 10px;
+	h1 {
+		font-size: 2.2em;
+		display: inline;
+  }
+	.btn {
+		@include button(#cccccc);
+		margin-top: 6px;
+		float: right;
+		clear: both;
+	}	
+}
+.post {
+}
+
+.post-title {
+	line-height: 1.2;
+	font-size: 2em;
+}
+
+.post-body {
+	font-size: 18px;
+}
+
+#modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(255,255,255,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+#modal:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+#modal > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+// .close {
+// 	background: #606061;
+// 	text-decoration: none;
+// 	font-weight: bold;
+// 	-webkit-border-radius: 12px;
+// 	-moz-border-radius: 12px;
+// 	border-radius: 12px;
+// 	-moz-box-shadow: 1px 1px 3px #000;
+// 	-webkit-box-shadow: 1px 1px 3px #000;
+// 	box-shadow: 1px 1px 3px #000;
+// }
+
+.close:hover { 
+	background: #0680CD; 
+}

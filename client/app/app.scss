@@ -62,6 +62,19 @@ body {
 	background: $white;
 }
 
+@mixin button($color) {
+		font-family: nexa_boldregular;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		text-align: center;
+		font-size: .8em;
+		background: $color;
+		border-color: $color;
+		border-radius: 999em;
+		color: $white;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
@@ -70,4 +83,5 @@ body {
 @import 'main/main.scss';
 @import 'modal/modal.scss';
 @import 'navbar/navbar.scss';
+@import 'postForm/postForm.scss';
 // endinjector

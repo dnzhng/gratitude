@@ -20,18 +20,10 @@
 }	
 
 .twitter-login {
-	font-family: nexa_boldregular;
-	text-transform: uppercase;
 	text-align: center;
-	letter-spacing: .1em;
 
 	.btn {
-		text-decoration: none;
-		font-size: .8em;
-		background: $twitter;
-		border-color: $twitter;
-		border-radius: 999em;
-		color: $white;
+		@include button($twitter);
 	}
 
 	div {

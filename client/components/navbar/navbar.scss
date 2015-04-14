@@ -5,6 +5,16 @@
 }
 
 .navbar {
-	font-family: 'nega_lightregular'
+	font-family: 'nexa_lightregular';
 	text-transform: uppercase;
+
+	li {
+		a {
+			padding-top: 18px;
+		}
+	}
+}
+
+.navbar-brand {
+	line-height: 24px;
 }
