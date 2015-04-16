@@ -15,7 +15,7 @@
 		display: inline;
   }
 	.btn {
-		@include button(#cccccc);
+		@include button($green);
 		margin-top: 6px;
 		float: right;
 		clear: both;
@@ -34,13 +34,13 @@
 	white-space: pre-line;
 }
 
-#modal {
+#newPost {
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(0,0,0,0.8);
+	background: rgba(255,255,255,0.95);
 	z-index: 99999;
 	opacity:0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -49,14 +49,15 @@
 	pointer-events: none;
 
 	.btn {
-		@include button(#cccccc);
-		margin: 0px 10px 10px 10px;
+		@include button($grey);
+		margin: 0px 10px 5px 10px;
 		font-size: .8em;
 	}
 
 	.submit {
 		float: right;
 		clear: both;
+		background-color: $green;
 	}
 
 	hr {
@@ -65,46 +66,27 @@
 	}
 	
 	div {
-		width: 500px;
-		position: relative;
-		margin: 10% auto;
-		border-radius: 10px;
+		padding: 5px;
+		margin-top: 10%;
+		border-radius: 5px;
 		background: #fff;
 	}
 
 	textarea {
 		font-size: 18px;
-		border: 0px;
-		width: 450px;
-		height: 250px;
-		margin: 20px 25px;
 		padding: 10px;
+		border: none;
+		height: 250px;
+		width: 100%;
 		resize: none;
 
 		&:focus {
 			outline: none;
 		}
 	}
-}
-
-#modal:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
-
-// .close {
-// 	background: #606061;
-// 	text-decoration: none;
-// 	font-weight: bold;
-// 	-webkit-border-radius: 12px;
-// 	-moz-border-radius: 12px;
-// 	border-radius: 12px;
-// 	-moz-box-shadow: 1px 1px 3px #000;
-// 	-webkit-box-shadow: 1px 1px 3px #000;
-// 	box-shadow: 1px 1px 3px #000;
-// }
-
-.close:hover { 
-	background: #0680CD; 
+	
+	&:target {
+		opacity:1;
+		pointer-events: auto;
+	}
 }

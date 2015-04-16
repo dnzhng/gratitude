@@ -5,7 +5,7 @@
 	<div class="col-md-6 col-md-offset-3">
 		<span class="profile-cta">
 			<h1>What are you grateful for today?</h1>
-			<a href="#modal" id="#openModal" class="btn">New Post</a>
+			<a href="#newPost" id="#openModal" class="btn">Add Post</a>
 		</span> 
 		<hr>
 	</div>
@@ -14,12 +14,12 @@
 		
 		<div class="col-md-8 col-md-offset-2" ng-controller="ProfileCtrl">
 
-			<div id="modal">
-				<div>
+			<div id="newPost">
+				<div class="col-md-6 col-md-offset-3">
 					<textarea name="text" placeholder="Enter Text Here" id="textarea" ng-model="body"></textarea>
 					<hr>
-					<a href="#close" title="Close" class="btn">Close</a>
-					<button class="btn submit" ng-click="addPost()">New Post</button>
+					<a href="#" title="Close" class="btn">Close</a>
+					<a href="#" class="btn submit" ng-click="addPost()">Submit</a>
 				</div>
 			</div>
 

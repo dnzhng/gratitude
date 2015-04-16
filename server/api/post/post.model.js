@@ -5,7 +5,8 @@ var mongoose = require('mongoose'),
 
 var PostSchema = new Schema({
   date: { type: Date, default: Date.now },
-  info: [String],
+  title: String,
+  body: String,
   active: Boolean
 });
 
